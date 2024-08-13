@@ -1,0 +1,195 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Suisse International', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #1C1B22, #cab3d3, #f39aa4, #79afc3, #444444);
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #F3F4F7;
+    margin: 20px 0px 0 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 20px 0 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F3F4F7;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FA9DB2;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 15%;
+    padding: 0 20px;
+    max-width: 600px;
+}
+
+.name {
+    font-size: 8rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-family: 'GT Sectra', serif;
+    color: #ffffff;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #444444;
+    letter-spacing: 3px;
+    word-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+.details {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #616161;
+    letter-spacing: 1.5px;
+}
+
+.current, .driven {
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+/* Work and About sections */
+.section {
+    padding: 100px 50px;
+    min-height: 100vh;
+}
+
+.work-section {
+    background-color: #1C1B22;
+    text-align: center;
+}
+
+.work-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000;
+}
+
+.images {
+    position: relative;
+    width: 400px; /* Container size adjusted for better alignment */
+    height: 400px; /* Container size adjusted for better alignment */
+    margin-left: 50px; /* Adjust to position the container */
+}
+
+.image-circle {
+    width: 180px; /* Size of the image */
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2; /* Ensures image is above the gradient */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Smaller shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gradient background radiating from behind the images */
+.image-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px; /* Slightly larger than the image */
+    height: 220px; /* Slightly larger than the image */
+    border-radius: 50%;
+    background: radial-gradient(circle, #1C1B22, #cab3d3, #f39aa4, #79afc3, #444444);
+    z-index: -1; /* Ensures gradient is behind the image */
+}
+
+/* Top image - smaller and centered */
+.image-circle:nth-child(1) {
+    width: 140px;
+    height: 140px;
+    top: 20px;
+    left: 130px;
+}
+
+/* Bottom left image */
+.image-circle:nth-child(2) {
+    width: 180px;
+    height: 180px;
+    top: 180px;
+    left: 60px;
+}
+
+/* Bottom right image */
+.image-circle:nth-child(3) {
+    width: 180px;
+    height: 180px;
+    top: 160px;
+    left: 180px;
+}
+
+.image-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-family: 'Suisse International', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-family: 'Suisse International', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+strong {
+    color: #FA9DB2;
+}
