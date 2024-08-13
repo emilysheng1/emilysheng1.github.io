@@ -5,7 +5,7 @@ body, html {
     width: 100%;
     font-family: 'Suisse International', sans-serif;
     color: #fff;
-    background: linear-gradient(135deg, #1C1B22, #cab3d3, #f39aa4, #79afc3, #444444);
+    background: linear-gradient(135deg, #1C1B22 0%, #cab3d3 25%, #f39aa4 50%, #79afc3 75%, #444444 100%);
     background-size: cover;
     scroll-behavior: smooth;
 }
@@ -53,10 +53,11 @@ nav a:hover {
     margin-left: 15%;
     padding: 0 20px;
     max-width: 600px;
+    min-height: 85vh; /* Adjust this value as needed */
 }
 
 .name {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: normal;
     margin-bottom: 10px;
     font-family: 'GT Sectra', serif;
