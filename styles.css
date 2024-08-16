@@ -196,7 +196,10 @@ a:hover {
     justify-content: space-around;
     background: linear-gradient(135deg, #1C1B22, #cab3d3, #f39aa4, #79afc3, #444444); /* Same gradient as the home page */
     padding-top: 100px;
+    padding-bottom: 0px;
     padding-left: 30px;
+    
+    
 }
 
 .images {
@@ -270,7 +273,7 @@ a:hover {
 }
 
 .about-text h2 {
-    font-family: 'Suisse International', sans-serif; /* Adjust the font family */
+    font-family: 'Times New Roman', 'serif'; /* Adjust the font family */
     font-size: 1.8rem; /* Adjust the font size */
     color: #ffffff; /* Adjust the text color */
     font-weight: bold; /* Adjust the font weight */
@@ -284,7 +287,7 @@ a:hover {
 
 .about-text p {
     font-family: 'Suisse International', sans-serif; /* Adjust the font family */
-    font-size: 1rem; /* Adjust the font size */
+    font-size: 0.9rem; /* Adjust the font size */
     line-height: 1.8; /* Adjust line height for readability */
     letter-spacing: 1px; /* Adjust letter spacing */
     word-spacing: 1.5px; /* Adjust word spacing */
