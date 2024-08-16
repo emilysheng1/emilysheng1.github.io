@@ -5,7 +5,7 @@ body, html {
     width: 100%;
     font-family: 'Suisse International', sans-serif;
     color: #fff;
-    background: linear-gradient(135deg, #1C1B22 0%, #cab3d3 25%, #f39aa4 50%, #79afc3 75%, #444444 100%);
+    background: linear-gradient(135deg, #1C1B22, #cab3d3, #f39aa4, #79afc3, #444444 );
     background-size: cover;
     scroll-behavior: smooth;
 }
@@ -15,6 +15,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    background: none; /* Ensures the header background is transparent */
+    color: inherit;
 }
 
 .logo {
@@ -53,7 +55,7 @@ nav a:hover {
     margin-left: 15%;
     padding: 0 20px;
     max-width: 600px;
-    min-height: 85vh; /* Adjust this value as needed */
+    min-height: 90vh /* Adjust this value as needed */
 }
 
 .name {
@@ -86,86 +88,174 @@ nav a:hover {
     color: #FFFFFF;
 }
 
-/* Work and About sections */
+/* Work section */
 .section {
     padding: 100px 50px;
-    min-height: 100vh;
+    min-height: 60vh; /* Ensure it takes up the full viewport height */
+    margin-top: 0;
 }
 
 .work-section {
-    background-color: #1C1B22;
-    text-align: center;
+    display: flex;
+    background: #ffffff; /* Set the background to white */
+    margin-top: 0; /* Ensure no gap from the previous section */
+    padding-top: 0; /* Removes any potential padding that could show the previous background */
+    background-position: top; /* Start the gradient from the top */
+    position: relative; 
+}
+
+.work-content {
+    text-decoration: none;
+    max-width: 34%; /* Adjust the width of the text content */
+    margin-top: 120px; /* Moves the text further down the page */
+    margin-left: 50px;
+    text-align: left;
+    font-family: 'Suisse International', sans-serif; /* Use Suisse International font */
+}
+
+.work-content a {
+    text-decoration: none;
+    color: inherit; /* Ensures the link inherits the color from the parent element */
 }
 
 .work-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 20px;
+    margin-top: 80px; /* Adjust this value to move the image down */
+    margin-right: 0px;
+    margin-left: 240px;
+    width: 70%; /* Adjust the percentage or use a specific pixel value */
+    height: auto; /* Maintains the aspect ratio */
 }
 
+.virtual-lost-found {
+    font-size: 2rem; /* Adjust the size as needed */
+    font-weight: bold; /* Adjust weight to match the image */
+    letter-spacing: 0.8px; /* Adjust letter spacing */
+    margin-top: 20px; /* Adjust margin above the text */
+    color: #007bff; /* Use the same blue color as in the image */
+    margin-bottom: 10px; /* Add some space between the title and the description */
+}
+
+.work-description {
+    font-size: 1.0rem; /* Set the size for the description text */
+    color: #444444; /* Set description text to gray */
+    line-height: 1.2; /* Adjust line height for readability */
+    letter-spacing: 1.5px; /* Adjust letter spacing */
+    word-spacing: 1px;
+    line-height: 1.4; /* Adjust line spacing */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+.tech-stack {
+    font-size: 0.8rem;
+    color: #616161; /* Gray color for the text */
+    text-align: left;
+    letter-spacing: 1.5px; /* Adjust letter spacing */
+    word-spacing: 1px;
+    margin-top: 10px;
+}
+
+.more-projects-container {
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom of the section */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    width: 100%;
+    text-align: center; /* Ensure the text is centered */
+}
+
+.more-projects {
+    font-family: 'Suisse International', sans-serif; /* Use Suisse International font */
+    font-size: 0.8rem;
+    color: #616161; /* Set the color */
+    font-style: italic; /* Make the text italic */
+    margin: 0;
+}
+
+/* Hover effect for the title */
+.work-content a:hover .virtual-lost-found {
+    transform: scale(1.03); /* Slightly enlarges the title */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the image */
+.work-image:hover {
+    transform: scale(1.03); /* Slightly enlarges the image */
+    transition: transform 0.3s ease;
+}
+
+/* About section */
 .about-section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #000;
+    background: linear-gradient(135deg, #1C1B22, #cab3d3, #f39aa4, #79afc3, #444444); /* Same gradient as the home page */
+    padding-top: 100px;
+    padding-left: 30px;
 }
 
 .images {
     position: relative;
-    width: 400px; /* Container size adjusted for better alignment */
-    height: 400px; /* Container size adjusted for better alignment */
-    margin-left: 50px; /* Adjust to position the container */
+    width: 600px; /* Increased width for more circles */
+    height: 600px; /* Increased height for more circles */
+    margin-left: 50px;
 }
 
 .image-circle {
-    width: 180px; /* Size of the image */
+    width: 180px;
     height: 180px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
     position: absolute;
-    z-index: 2; /* Ensures image is above the gradient */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Smaller shadow */
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Gradient background radiating from behind the images */
-.image-circle::before {
+/* Positions for the gradient circles */
+.gradient-circle:nth-child(1) {
+    top: 0px;
+    left: 100px;
+}
+
+.gradient-circle:nth-child(2) {
+    top: 200px;
+    left: 0px;
+}
+
+.gradient-circle:nth-child(3) {
+    top: 200px;
+    left: 200px;
+}
+
+/* Positions for the image circles */
+.image-circle:nth-child(4) {
+    top: 100px;
+    left: 50px;
+}
+
+.image-circle:nth-child(5) {
+    top: 300px;
+    left: 150px;
+}
+
+.image-circle:nth-child(6) {
+    top: 100px;
+    left: 250px;
+}
+
+/* Gradient background for the gradient-only circles */
+.gradient-circle::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 220px; /* Slightly larger than the image */
-    height: 220px; /* Slightly larger than the image */
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     background: radial-gradient(circle, #1C1B22, #cab3d3, #f39aa4, #79afc3, #444444);
-    z-index: -1; /* Ensures gradient is behind the image */
-}
-
-/* Top image - smaller and centered */
-.image-circle:nth-child(1) {
-    width: 140px;
-    height: 140px;
-    top: 20px;
-    left: 130px;
-}
-
-/* Bottom left image */
-.image-circle:nth-child(2) {
-    width: 180px;
-    height: 180px;
-    top: 180px;
-    left: 60px;
-}
-
-/* Bottom right image */
-.image-circle:nth-child(3) {
-    width: 180px;
-    height: 180px;
-    top: 160px;
-    left: 180px;
+    z-index: -1;
 }
 
 .image-circle:hover {
