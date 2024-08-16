@@ -24,7 +24,7 @@ header {
     font-weight: bold;
     letter-spacing: 1px;
     color: #F3F4F7;
-    margin: 20px 0px 0 10px;
+    margin: 15px 0px 0 10px;
 }
 
 nav ul {
@@ -55,7 +55,7 @@ nav a:hover {
     margin-left: 15%;
     padding: 0 20px;
     max-width: 600px;
-    min-height: 90vh /* Adjust this value as needed */
+    min-height: 85vh /* Adjust this value as needed */
 }
 
 .name {
@@ -108,7 +108,7 @@ nav a:hover {
     text-decoration: none;
     max-width: 34%; /* Adjust the width of the text content */
     margin-top: 120px; /* Moves the text further down the page */
-    margin-left: 50px;
+    margin-left: 90px;
     text-align: left;
     font-family: 'Suisse International', sans-serif; /* Use Suisse International font */
 }
@@ -119,10 +119,10 @@ nav a:hover {
 }
 
 .work-image {
-    margin-top: 80px; /* Adjust this value to move the image down */
+    margin-top: 90px; /* Adjust this value to move the image down */
     margin-right: 0px;
-    margin-left: 240px;
-    width: 70%; /* Adjust the percentage or use a specific pixel value */
+    margin-left: 250px;
+    width: 50%; /* Adjust the percentage or use a specific pixel value */
     height: auto; /* Maintains the aspect ratio */
 }
 
@@ -179,8 +179,14 @@ nav a:hover {
 
 /* Hover effect for the image */
 .work-image:hover {
-    transform: scale(1.03); /* Slightly enlarges the image */
+    transform: scale(1.01); /* Slightly enlarges the image */
     transition: transform 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    color: #FA9DB2;
 }
 
 /* About section */
@@ -201,8 +207,8 @@ nav a:hover {
 }
 
 .image-circle {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -251,8 +257,8 @@ nav a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: radial-gradient(circle, #1C1B22, #cab3d3, #f39aa4, #79afc3, #444444);
     z-index: -1;
@@ -263,22 +269,36 @@ nav a:hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-.about-text {
-    max-width: 500px;
-}
-
 .about-text h2 {
-    font-family: 'Suisse International', sans-serif;
-    font-size: 3rem;
-    color: #ffffff;
-    font-weight: bold;
+    font-family: 'Suisse International', sans-serif; /* Adjust the font family */
+    font-size: 1.8rem; /* Adjust the font size */
+    color: #ffffff; /* Adjust the text color */
+    font-weight: bold; /* Adjust the font weight */
+    letter-spacing: 2px; /* Adjust letter spacing */
+    word-spacing: 3px; /* Adjust word spacing */
+    line-height: 1.2; /* Adjust line height */
+    margin-bottom: 20px; /* Adjust margin below the title */
+    margin-right: 100px;
+    text-align: left; /* Align the text */
 }
 
 .about-text p {
-    font-family: 'Suisse International', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #cccccc;
+    font-family: 'Suisse International', sans-serif; /* Adjust the font family */
+    font-size: 1rem; /* Adjust the font size */
+    line-height: 1.8; /* Adjust line height for readability */
+    letter-spacing: 1px; /* Adjust letter spacing */
+    word-spacing: 1.5px; /* Adjust word spacing */
+    color: #444444; /* Adjust the text color */
+    margin-top: 20px; /* Adjust margin above the text block */
+    margin-right: 100px;
+    text-align: left; /* Align the text */
+}
+
+/* For text block placement */
+.about-text {
+    max-width: 450px; /* Adjust the maximum width of the entire text block */
+    margin-left: 5px; /* Adjust left margin to move the text block */
+    margin-top: -150px; /* Adjust top margin to move the text block */
 }
 
 strong {
